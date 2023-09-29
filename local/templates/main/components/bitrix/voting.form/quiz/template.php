@@ -1,0 +1,51 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+
+<?= ShowError($arResult["ERROR_MESSAGE"]); ?>
+<?= ShowNote($arResult["OK_MESSAGE"]); ?>
+
+
+<? if (!empty($arResult["VOTE"])): ?>
+
+  <div class="container-quiz">
+    <form action="<?= POST_FORM_ACTION_URI ?>" method="post" class="quiz-vote-form vote-form">
+      <input type="hidden" name="vote" value="Y">
+      <input type="hidden" name="PUBLIC_VOTE_ID" value="<?= $arResult["VOTE"]["ID"] ?>">
+      <input type="hidden" name="VOTE_ID" value="<?= $arResult["VOTE"]["ID"] ?>">
+      <?= bitrix_sessid_post() ?>
+      <?php foreach ($arResult['QUESTIONS'] as $keyQuest => $question) : ?>
+      <div class="quiz" id="quiz<?= $keyQuest; ?>">
+        <div class="quiz-header" id="header">
+          <!-- Заголовок вопроса -->
+          <h2 class="title"><? echo $arResult["VOTE"]["TITLE"]; ?></h2>
+          <h2 class="title title-quest">
+            <?= $question['QUESTION']; ?>
+          </h2>
+
+        </div>
+        <ul class="quiz-list" id="list">
+          <?php foreach ($question["ANSWERS"] as $answer) : ?>
+            <li>
+              <label>
+                <input type="radio" class="answer input" name="vote_radio_<?= $answer["QUESTION_ID"] ?>"
+                       value="<?= $answer["ID"] ?>" <?= $answer["~FIELD_PARAM"] ?>/>
+                <span class="text-content"><?= $answer['MESSAGE']; ?></span>
+              </label>
+            </li>
+          <? endforeach; ?>
+
+        </ul>
+          <button class="quiz-submit submit"
+                  name="vote">Отправить</button>
+          </div>
+      <? endforeach; ?>
+
+      <dialog id="dialog">
+        <h2>Спасибо за уделенное время!</h2>
+        <p>Нажмите отправить, чтобы закончить и перейти на главную станицу.</p>
+        <input class="x" type="submit" name="vote" value="Отправить" />
+      </dialog>
+    </form>
+  </div>
+
+
+<? endif ?>
