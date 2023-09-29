@@ -1,26 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
-/** {*/
-/*	box-sizing: border-box;*/
-/*	margin: 0;*/
-/*	padding: 0;*/
-/*	font-size: inherit;*/
-/*}*/
-
-/*body {*/
-/*	font-family: "Noto Sans", sans-serif;*/
-/*	font-size: 16px;*/
-
-/*	!* https://cssgradient.io/gradient-backgrounds/ *!*/
-/*	background: #c6ffdd;*/
-/*	background: linear-gradient( to right, #f7797d, #fbd786, #c6ffdd );*/
-
-/*	display: flex;*/
-/*	justify-content: center;*/
-/*	align-items: center;*/
-/*	height: 100vh;*/
-/*}*/
-
 .input {
 	border: 1px solid #eee;
 	height: 15px;
@@ -88,6 +67,7 @@
 .text-content {
 	font-weight: 700;
 	font-size: 1.3rem;
+	letter-spacing: 0.8px;
 	color: #6e6e6e;
 	text-transform: uppercase;
 }
@@ -110,7 +90,7 @@
 .quiz-list label {
 	cursor: pointer;
 	width: 100%;
-    display: block;
+    display: flex;
 	padding: 1rem 0.5rem;
 }
 
@@ -118,27 +98,13 @@
 	background-color: seashell;
 }
 
-.quiz-list label.correct {
-	color: rgb(36, 144, 77);
-	font-weight: bold;
-}
-
-.quiz-list label.disabled {
-	cursor: no-drop;
-}
-
-.quiz-list label.disabled:hover {
-	cursor: no-drop;
-	background-color: transparent;
-}
-
-.quiz-list label.wrong {
-	color: rgb(218, 59, 59);
-	font-weight: bold;
+.label-answer {
+	align-items: center;
 }
 
 .quiz-list input[type="radio"] {
-	margin-right: 10px;
+	margin-right: 15px;
+	margin-top: 0;
 }
 
 .quiz-submit {
@@ -170,27 +136,6 @@
 .submit:focus {
 	outline: none;
 	background-color: #03a8f2;
-}
-
-.submit.next {
-	background-color: #000000;
-}
-
-.submit.next:hover {
-	background-color: #222222;
-}
-
-.submit.next:focus {
-	outline: none;
-	background-color: #444444;
-}
-
-.quiz-list.shake {
-	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-	transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
-	perspective: 1000px;
-	color: #94ca00;
 }
 
 .opacity-quiz {
@@ -225,7 +170,6 @@
 .open {
 	display: flex;
 }
-
 
 .x {
 	margin: 10px 0 15px 0;

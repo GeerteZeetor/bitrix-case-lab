@@ -25,7 +25,7 @@
           <ul class="quiz-list" id="list">
             <?php foreach ($question["ANSWERS"] as $answer) : ?>
               <li>
-                <label>
+                <label class="label-answer">
                   <input type="radio" class="answer input" name="vote_radio_<?= $answer["QUESTION_ID"] ?>"
                          value="<?= $answer["ID"] ?>" <?= $answer["~FIELD_PARAM"] ?>/>
                   <!-- Ответ -->
@@ -39,9 +39,9 @@
       <? endforeach; ?>
       <dialog id="dialog">
         <div style="justify-content: center">
-        <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/up.jpg" alt="" class="dialog-img">
+        <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/up.jpg" alt="finger up" class="dialog-img">
         </div>
-        <h2>Спасибо за уделенное время!</h2>
+        <h2>Спасибо за уделённое время!</h2>
         <p>Нажмите отправить, чтобы закончить и перейти на главную станицу.</p>
         <input class="x" type="submit" name="vote" value="Отправить"/>
       </dialog>
