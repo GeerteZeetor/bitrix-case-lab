@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
         })
         if (count > 2) {
             window.dialog.showModal()
+            document.querySelector('body').style.overflow = 'hidden'
             modal.classList.add('open')
         }
     }
