@@ -1,11 +1,11 @@
-window.addEventListener('load', (ev) => {
+window.addEventListener('load', () => {
     let count = 0;
     const quizArr = document.querySelectorAll('.quiz')
     const quizList = document.querySelectorAll('.quiz-list')
     const form = document.querySelector('.vote-form')
-    const container = document.querySelector(".container-quiz");
+    const modal = document.querySelector('#dialog')
 
-    quizList.forEach((value, key, parent) => {
+    quizList.forEach((value) => {
         value.addEventListener('change', () => {
             value.nextElementSibling.removeAttribute('disabled')
             value.nextElementSibling.classList.remove('button-disable')
@@ -33,8 +33,7 @@ window.addEventListener('load', (ev) => {
         })
         if (count > 2) {
             window.dialog.showModal()
-            container.classList.add('container-quiz-modal')
-
+            modal.classList.add('open')
         }
     }
     quizRecStyleChange()

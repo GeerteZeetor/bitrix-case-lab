@@ -206,21 +206,32 @@
 	cursor: default;
 }
 
-dialog {
-	padding: 1rem 3rem;
+#dialog {
+	flex-direction: column;
+	align-items: center;
 	background: white;
 	max-width: 600px;
-	padding-top: 2rem;
+	padding: 2rem 3rem 1rem;
 	border-radius: 20px;
 	border: 0;
 	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
 	animation: fadeIn 1s ease both;
 }
 
+.dialog-img {
+	width: 80px; height: 80px;
+}
+
+.open {
+	display: flex;
+}
+
+
 .x {
 	margin: 10px 0 15px 0;
 	font-weight: 600;
 	border-radius: 5px;
+	animation: shake 1.5s ease both;
 }
 
 .x:hover {
