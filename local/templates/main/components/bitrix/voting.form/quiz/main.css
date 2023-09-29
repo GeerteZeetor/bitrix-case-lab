@@ -1,204 +1,332 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 .input {
-	border: 1px solid #eee;
-	height: 15px;
-	box-shadow: none;
-	padding-left: 10px;
-	font-size: 14px;
-	color: #626262;
-	width:15px;
+    border: 1px solid #eee;
+    height: 15px;
+    box-shadow: none;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #626262;
+    width: 15px;
 }
 
 .container-quiz {
-	font-family: "Noto Sans", sans-serif;
-	font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
 
-	 /*https://cssgradient.io/gradient-backgrounds/ */
-	background: #c6ffdd;
-	background: linear-gradient( to right, #f7797d, #fbd786, #c6ffdd );
+    /*https://cssgradient.io/gradient-backgrounds/ */
+    background: #c6ffdd;
+    background: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .vote-form {
-	transition: all 0.5s ease-in-out;
-	border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 15px;
 }
 
 .quiz-vote-form {
-	opacity: 0;
+    opacity: 0;
 }
 
 .quiz {
-	position: relative;
-	padding: 2rem 2rem calc(2rem + 70px);
+    position: relative;
+    padding: 2rem 2rem calc(2rem + 70px);
 
-	background-color: #fff;
-	border-radius: 8px;
-	box-shadow: 0 0 10px 4px rgba(100, 100, 100, 0.32);
-	width: 600px;
-	max-width: 95vw;
-	overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 4px rgba(100, 100, 100, 0.32);
+    width: 600px;
+    max-width: 95vw;
+    overflow: hidden;
 }
 
-.title{
-	font-size: 1.8rem;
-	padding: 1rem 0;
-	text-align: center;
-	margin: 0;
-	font-weight: 600;
+#quiz2 {
+    margin-bottom: 53px;
+}
+
+.title {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
 }
 
 .title-quest {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .summary {
-	text-align: center;
-	margin: 0.5rem 0 1rem;
-	font-size: 1.2rem;
-	font-weight: 400;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .text-content {
-	font-weight: 700;
-	font-size: 1.3rem;
-	letter-spacing: 0.8px;
-	color: #6e6e6e;
-	text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    color: #6e6e6e;
+    text-transform: lowercase;
 }
 
+
 .result {
-	text-align: center;
-	font-size: 1.2rem;
-	font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .quiz-list {
-	list-style-type: none;
-	padding: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 
 .quiz-list li {
-	font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .quiz-list label {
-	cursor: pointer;
-	width: 100%;
+    cursor: pointer;
+    width: 100%;
     display: flex;
-	padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .quiz-list label:hover {
-	background-color: seashell;
+    background-color: seashell;
 }
 
 .label-answer {
-	align-items: center;
+    align-items: center;
+}
+
+.img-loader {
+    /*margin-top: -1px;*/
+    width: 486px;
+    margin-bottom: 25px;
 }
 
 .quiz-list input[type="radio"] {
-	margin-right: 15px;
-	margin-top: 0;
+    margin-right: 15px;
+    margin-top: 0;
 }
 
 .quiz-submit {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 70px;
-	line-height: 70px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    line-height: 70px;
 }
 
 .submit {
-	background-color: #2ea3d9;
-	color: #fff;
-	border: none;
-	display: block;
-	width: 100%;
-	cursor: pointer;
-	font-size: 1.8rem;
-	font-family: inherit;
-	font-weight: 600;
-	transition: 0.3s all;
+    background-color: #2ea3d9;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: inherit;
+    font-weight: 600;
+    transition: 0.3s all;
 }
 
 .submit:hover {
-	background-color: #03a8f2;
+    background-color: #03a8f2;
 }
 
 .submit:focus {
-	outline: none;
-	background-color: #03a8f2;
+    outline: none;
+    background-color: #03a8f2;
 }
 
 .opacity-quiz {
-	display: none;
+    display: none;
 }
 
 .button-disable {
-	background-color: grey;
+    background-color: grey;
 }
 
 .button-disable:hover {
-	background-color: grey;
-	cursor: default;
+    background-color: grey;
+    cursor: default;
 }
 
 #dialog {
-	flex-direction: column;
-	align-items: center;
-	background: white;
-	max-width: 600px;
-	padding: 2rem 3rem 1rem;
-	border-radius: 20px;
-	border: 0;
-	box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
-	animation: fadeIn 1s ease both;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    max-width: 600px;
+    padding: 2rem 3rem 1rem;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+}
+
+#dialog > p {
+    color: #6e6e6e;
 }
 
 .dialog-img {
-	width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
 }
 
 .open {
-	display: flex;
+    display: flex;
 }
 
 .x {
-	margin: 10px 0 15px 0;
-	font-weight: 600;
-	border-radius: 5px;
-	animation: shake 1.5s ease both;
+    margin: 10px 0 20px 0;
+    font-weight: 600;
+    border-radius: 5px;
+    animation: shake 1.5s ease both;
 }
 
 .x:hover {
-	background-color:  #03a8f2;
-	color: white;
+    background-color: #03a8f2;
+    color: white;
 }
 
 @keyframes shake {
-	10%,
-	90% {
-		transform: translate3d(-1px, 0, 0);
-	}
-	20%,
-	80% {
-		transform: translate3d(2px, 0, 0);
-	}
-	30%,
-	50%,
-	70% {
-		transform: translate3d(-4px, 0, 0);
-	}
-	40%,
-	60% {
-		transform: translate3d(4px, 0, 0);
-	}
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }
+
+.progress2 {
+    margin-top: -34px;
+    margin-bottom: 30px;
+    padding: 1px;
+    border-radius: 30px;
+    height: 8px;
+    width: 486px;
+    background: rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress2.porg {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding: 1px;
+    border-radius: 30px;
+    height: 8px;
+    width: 486px;
+    background: rgba(0, 0, 0, 0.07);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+.progress-bar2 {
+    height: 7px;
+    border-radius: 30px;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.05)
+    );
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.progress-moved-1 .progress-bar2 {
+    width: 0;
+    background-color: #28B363;
+    animation: progressAnimation 4s;
+}
+.progress-moved-2 .progress-bar2 {
+    width: 34%;
+    background-color: #28B363;
+    animation: progressAnimation-1 4s;
+}
+.progress-moved-3 .progress-bar2 {
+    width: 68%;
+    background-color: #28B363;
+    animation: progressAnimation-2 4s;
+}
+.progress-moved-4 .progress-bar2 {
+    width: 100%;
+    background-color: #28B363;
+    animation: progressAnimation-3 4s;
+}
+
+
+
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+        background-color: #28B363;
+    }
+    100% {
+        width: 0;
+        background-color: #28B363;
+    }
+}
+@keyframes progressAnimation-1 {
+    0% {
+        width: 0;
+        background-color: #28B363;
+    }
+    100% {
+        width: 34%;
+        background-color: #28B363;
+    }
+}
+@keyframes progressAnimation-2 {
+    0% {
+        width: 34%;
+        background-color: #28B363;
+    }
+    100% {
+        width: 68%;
+        background-color: #28B363;
+    }
+}
+
+@keyframes progressAnimation-3 {
+    0% {
+        width: 68%;
+        background-color: #28B363;
+    }
+    100% {
+        width: 100%;
+        background-color: #28B363;
+    }
+}
+
+

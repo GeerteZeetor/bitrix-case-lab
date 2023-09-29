@@ -13,14 +13,15 @@
       <?php foreach ($arResult['QUESTIONS'] as $keyQuest => $question) : ?>
         <div class="quiz" id="quiz<?= $keyQuest; ?>">
           <div class="quiz-header" id="header">
-            <!-- Заголовок вопроса -->
-            <h2 class="title">
-              <? echo $arResult["VOTE"]["TITLE"]; ?>
-            </h2>
             <!-- Вопрос -->
             <h2 class="title title-quest">
               <?= $question['QUESTION']; ?>
             </h2>
+                <img class="img-loader" src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/loader_<?= $keyQuest; ?>.png" alt="">
+            <div class="progress2 progress-moved-<?= $keyQuest; ?>">
+              <div class="progress-bar2">
+              </div>
+            </div>
           </div>
           <ul class="quiz-list" id="list">
             <?php foreach ($question["ANSWERS"] as $answer) : ?>
@@ -39,11 +40,17 @@
       <? endforeach; ?>
       <dialog id="dialog">
         <div style="justify-content: center">
-        <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/up.jpg" alt="finger up" class="dialog-img">
+          <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/up.jpg" alt="finger up" class="dialog-img">
         </div>
         <h2>Спасибо за уделённое время!</h2>
-        <p>Нажмите отправить, чтобы закончить и перейти на главную станицу.</p>
+        <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/modal_img_loader.png" alt="finger up" class="dialog-img-loader">
+        <div class="progress2 porg progress-moved-4">
+          <div class="progress-bar2">
+          </div>
+        </div>
+        <p>Нажмите отправить, чтобы закончить и перейти на главную станицу</p>
         <input class="x" type="submit" name="vote" value="Отправить"/>
+        <p>Проголосовало: <?= $arResult['QUESTIONS'][1]['COUNTER']; ?> человек</p>
       </dialog>
     </form>
   </div>

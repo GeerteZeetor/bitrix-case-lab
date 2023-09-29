@@ -1,18 +1,31 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Новая страница");
-?>
-<?$APPLICATION->IncludeComponent("bitrix:voting.result", "graphics", Array(
-	"CACHE_TIME" => "1200",	// Время кеширования (сек.)
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"QUESTION_DIAGRAM_1" => "histogram",	// Тип диаграммы для вопроса "К какой отрасли относится Грин..."
-		"QUESTION_DIAGRAM_2" => "histogram",	// Тип диаграммы для вопроса "Гринатом является"
-		"QUESTION_DIAGRAM_3" => "histogram",	// Тип диаграммы для вопроса "Масштаб компании"
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:voting.result",
+	"graphics",
+	Array(
+		"CACHE_TIME" => "1200",
+		"CACHE_TYPE" => "A",
+		"QUESTION_DIAGRAM_1" => "histogram",
+		"QUESTION_DIAGRAM_2" => "histogram",
+		"QUESTION_DIAGRAM_3" => "histogram",
 		"THEME" => "colourless",
-		"VOTE_ALL_RESULTS" => "Y",	// Показывать все результаты
-		"VOTE_ID" => "1",	// Идентификатор опроса
-	),
-	false
-);?>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+		"VOTE_ALL_RESULTS" => "Y",
+		"VOTE_ID" => "1"
+	)
+);?><br>
+<br>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:voting.result",
+	"",
+	Array(
+		"CACHE_TIME" => "1200",
+		"CACHE_TYPE" => "A",
+		"QUESTION_DIAGRAM_1" => "-",
+		"QUESTION_DIAGRAM_2" => "-",
+		"QUESTION_DIAGRAM_3" => "-",
+		"VOTE_ALL_RESULTS" => "N",
+		"VOTE_ID" => "1"
+	)
+);?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
