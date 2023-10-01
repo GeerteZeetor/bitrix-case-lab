@@ -1,9 +1,19 @@
 window.addEventListener('load', () => {
     let count = 0;
+    let is_click_reload = false;
     const quizArr = document.querySelectorAll('.quiz')
     const quizList = document.querySelectorAll('.quiz-list')
     const form = document.querySelector('.vote-form')
+    const btn_submit = document.querySelector('.x')
     const modal = document.querySelector('#dialog')
+
+    btn_submit.addEventListener('click', () => {
+        is_click_reload = true
+    })
+
+    window.onbeforeunload = function () {
+       return is_click_reload ? null : true
+    }
 
     quizList.forEach((value) => {
         value.addEventListener('change', () => {
@@ -29,9 +39,8 @@ window.addEventListener('load', () => {
                     }, 500)
                 })
             }
-
         })
-        if (count > 2) {
+        if (count > quizArr.length -1) {
             window.dialog.showModal()
             document.querySelector('body').style.overflow = 'hidden'
             modal.classList.add('open')

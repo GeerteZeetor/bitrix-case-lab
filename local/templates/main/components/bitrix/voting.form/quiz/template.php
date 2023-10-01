@@ -48,8 +48,8 @@
           <div class="progress-bar2">
           </div>
         </div>
-        <p>Нажмите отправить, чтобы закончить и перейти на главную станицу</p>
-        <input class="x" type="submit" name="vote" value="Отправить"/>
+        <p>Нажмите закрыть, чтобы закончить и перейти на главную станицу</p>
+        <input class="x" type="submit" name="vote" value="Закрыть"/>
         <p>Проголосовало: <?= $arResult['QUESTIONS'][1]['COUNTER']; ?> человек</p>
       </dialog>
     </form>
