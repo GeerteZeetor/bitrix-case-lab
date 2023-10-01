@@ -36,10 +36,9 @@ use Bitrix\Main\Page\Asset;
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/font-awesome.min.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/style.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/responsive.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/components/bitrix/voting.form/quiz/main.css');
+
 
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/vendor/modernizr-2.8.3.min.js');
-
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/vendor/jquery-1.12.0.min.js');
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . 'assets/js/bootstrap.min.js');
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
@@ -54,7 +53,6 @@ use Bitrix\Main\Page\Asset;
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/plugins.js');
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/collapse.js');
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/components/bitrix/voting.form/quiz/main.js');
 
   Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">')
 
