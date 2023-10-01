@@ -15,15 +15,12 @@ window.addEventListener('load', () => {
             console.log(target)
             if(target.classList.contains('answer')) {
                 for(let i = 0; i < inputArr.length; i++) {
-                    // Убираем у других
                     console.log(inputArr[i].children[0])
                     inputArr[i].children[0].parentElement.classList.remove('checked');
                 }
-                // Добавляем тому на который нажали
                 target.parentElement.classList.add('checked');
             }
         })
-
     })
 
     btn_submit.addEventListener('click', () => {

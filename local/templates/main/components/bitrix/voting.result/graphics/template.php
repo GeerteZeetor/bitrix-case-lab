@@ -15,14 +15,11 @@ if (!empty($arResult["OK_MESSAGE"])):
   </div>
 <?
 endif;
-
 if (empty($arResult["VOTE"]) || empty($arResult["QUESTIONS"])):
   return true;
 endif;
-
 ?>
 <div class="background">
-
   <div class="container container-graph">
     <?php foreach ($arResult["QUESTIONS"] as $arQuestion) : ?>
       <h1 class="title-1 title-graph"><?= $arQuestion["QUESTION"]; ?></h1>
@@ -39,4 +36,3 @@ endif;
     <? endforeach; ?>
   </div>
 </div>
-

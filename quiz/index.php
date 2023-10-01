@@ -16,5 +16,3 @@ $APPLICATION->SetTitle("Опрос о Гринатом");
 );?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
-
-<!--vote_result.php?VOTE_ID=#VOTE_ID#-->

@@ -1,10 +1,6 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <?= $this->addExternalCss("/local/templates/main/components/bitrix/voting.form/quiz/main.css"); ?>
-<?= $this->addExternalJS("/local/templates/main/components/bitrix/voting.form/quiz/main.js");; ?>
-
-
-<?= ShowError($arResult["ERROR_MESSAGE"]); ?>
-<?= ShowNote($arResult["OK_MESSAGE"]); ?>
+<?= $this->addExternalJS("/local/templates/main/components/bitrix/voting.form/quiz/main.js"); ?>
 
 <? if (!empty($arResult["VOTE"])): ?>
   <div class="container-quiz">
