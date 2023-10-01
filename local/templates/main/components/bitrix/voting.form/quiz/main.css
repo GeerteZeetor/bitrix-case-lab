@@ -104,12 +104,22 @@
     width: 100%;
     display: flex;
     padding: 1rem 0.5rem;
-    transition: 0.3s all;
+    transition: 0.3s transform;
+    border-radius: 5px;
 }
 
 .quiz-list label:hover {
-    background-color: seashell;
+    background-color: rgba(248, 203, 132, 0.58);
     transform: translateY(-2px);
+}
+
+.checked {
+    background-color: rgba(248, 203, 132, 0.45);
+
+}
+
+.answer {
+    opacity: 0;
 }
 
 .label-answer {
