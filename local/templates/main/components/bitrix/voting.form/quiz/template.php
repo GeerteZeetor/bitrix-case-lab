@@ -50,7 +50,7 @@
         </div>
         <p>Нажмите закрыть, чтобы закончить и перейти на главную станицу</p>
         <input class="x" type="submit" name="vote" value="Закрыть"/>
-        <p>Проголосовало: <?= $arResult['QUESTIONS'][1]['COUNTER']; ?> человек</p>
+        <p>Проголосовало: <?= $arResult['QUESTIONS'][1]['COUNTER'] + 1; ?> человек</p>
       </dialog>
     </form>
   </div>
