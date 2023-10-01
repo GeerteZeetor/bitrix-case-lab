@@ -104,10 +104,12 @@
     width: 100%;
     display: flex;
     padding: 1rem 0.5rem;
+    transition: 0.3s all;
 }
 
 .quiz-list label:hover {
     background-color: seashell;
+    transform: translateY(-2px);
 }
 
 .label-answer {
