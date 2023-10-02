@@ -3,7 +3,6 @@ global $APPLICATION;
 require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php';
 $APPLICATION->SetTitle('Услуги');
 $APPLICATION->SetPageProperty('title', 'Услуги | We Coders');
-$APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
 ?>
 
 <?php $APPLICATION->IncludeComponent("bitrix:news", "Services", [
@@ -41,7 +40,7 @@ $APPLICATION->AddChainItem($APPLICATION->GetTitle(), $APPLICATION->GetCurDir());
     "HIDE_LINK_WHEN_NO_DETAIL"  => "N",    // Скрывать ссылку, если нет детального описания
     "IBLOCK_ID"                 => getIblockIdByCode('services'),    // Инфоблок
     "IBLOCK_TYPE"               => "content",    // Тип инфоблока
-    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",    // Включать инфоблок в цепочку навигации
     "LIST_ACTIVE_DATE_FORMAT"   => "d.m.Y",    // Формат показа даты
   // Поля
     "LIST_FIELD_CODE"           => [
