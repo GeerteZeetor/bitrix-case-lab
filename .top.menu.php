@@ -29,22 +29,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Результаты опроса", 
-		"/quiz-result/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Гринатом", 
 		"/greenatom/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Пройти опрос", 
-		"/quiz/", 
 		Array(), 
 		Array(), 
 		"" 
