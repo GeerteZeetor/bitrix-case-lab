@@ -62,3 +62,4 @@ Thumbs.db
 /bitrix/resize_cache/
 /.php-cs-fixer.cache
 /tools/php-cs-fixer/vendor/
+/node_modules/
